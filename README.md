@@ -6,7 +6,7 @@ Este es el repositorio del curso de LinkedIn Learning `[Desafío de programació
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
-Este curso te presenta un reto para amplificar tus habilidades de programación en C. Como sabes, la práctica hace maestros, especialmente cuando se trata del desarrollo de aplicaciones. En este contenido práctico implementarás un sistema que permitirá al usuario o usuaria de nuestra aplicación notificar manualmente errores producidos durante su jornada de trabajo. Además, el histórico de errores se almacenará en logs diarios. Agarra tu teclado y prepárate. ¡Empezamos!
+Este curso orientado a la solución de problemas específicos en la programación de C está pensado para amplificar tu dominio del lenguaje y conseguir que puedas mejorar tus desarrollos en el día a día gracias a los conceptos aprendidos. El contenido formativo está dividido en tres categorías: básico, intermedio y avanzado para que puedas sacarle provecho independientemente de tu nivel de inicio. ¿Empezamos a programar en C? ¡Vamos!
 
 ## Instrucciones
 
