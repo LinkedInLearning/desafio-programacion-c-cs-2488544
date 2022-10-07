@@ -6,7 +6,7 @@ Este es el repositorio del curso de LinkedIn Learning `[Desafío de programació
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
-En este curso descubrirás las características más notables de .NET 7, así como sus herramientas relacionadas. También entenderás por qué .NET 7 es la versión más importante de la historia de esta plataforma. El curso arranca dando una introducción a .NET 7, para posteriormente, enseñarte a empezar a desarrollar con esta versión y con sus herramientas más destacables. También se incluyen explicaciones para las características más importantes, como las mejoras en C# 11.		
+Este curso te presenta un reto para amplificar tus habilidades de programación en C. Como sabes, la práctica hace maestros, especialmente cuando se trata del desarrollo de aplicaciones. En este contenido práctico implementarás un sistema que permitirá al usuario o usuaria de nuestra aplicación notificar manualmente errores producidos durante su jornada de trabajo. Además, el histórico de errores se almacenará en logs diarios. Agarra tu teclado y prepárate. ¡Empezamos!
 
 ## Instrucciones
 
@@ -16,17 +16,9 @@ Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. 
 
 Las ramas están estructuradas para corresponder a los vídeos del curso. La convención de nomenclatura es Capítulo#_Vídeo#. Por ejemplo, la rama denominada `02_03` corresponde al segundo capítulo y al tercer vídeo de ese capítulo. Algunas ramas tendrán un estado inicial y otro final. Están marcadas con las letras i («inicio») y f («fin»). La branch i tiene el mismo código que al principio del vídeo. La branch f tiene el mismo código que al final del vídeo. La rama master tiene el estado final del código que aparece en el curso.
 
-## Instalación
-
-1. Para utilizar estos archivos de ejercicios, debes tener descargado lo siguiente:
-   - [software]
-
-2. Clona este repositorio en tu máquina local usando la Terminal (macOS) o CMD (Windows), o una herramienta GUI como SourceTree.
-3. [Instrucciones específicas del curso].
-
 ### Docente
 
-**Rodrigo Díaz Concha**
+**Eliezer López**
 
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/eliezer-lopez).
 
