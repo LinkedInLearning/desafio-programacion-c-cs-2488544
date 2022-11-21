@@ -2,7 +2,7 @@
 
 Este es el repositorio del curso de LinkedIn Learning `[Desafío de programación: C]`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![Nombre completo del curso][lil-thumbnail-url][Copy&Past Image from LiL-Buddy] 
+![Nombre completo del curso][lil-thumbnail-url]
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
@@ -10,7 +10,12 @@ Este curso te presenta un reto para amplificar tus habilidades de programación 
 
 ## Instrucciones
 
-Este repositorio tiene ramas (branches) para cada uno de los vídeos del curso. Puedes usar el menú emergente de la rama en GitHub para cambiar a una rama específica y echar un vistazo al curso en esa etapa, o puedes añadir `/tree/nombre_de_la_rama` a la URL para ir a la rama a la que quieres acceder.
+1. Para utilizar los archivos fuente, de cabecera o de configuración, necesitarás las siguientes herramientas:
+- Visual Studio Code (https://code.visualstudio.com/download)
+- C/C++ (como extensión de Visual Studio Code)
+- CodeRunner (como extensión de Visual Studio Code)
+2. Clona este repositorio en tu ordenador local usando la terminal (macOS), CMD (Windows), o una herramienta GUI como SourceTree.
+3. Este curso ha sido grabado utilizando macOS. Si utilizas otro sistema operativo es posible que algunas instrucciones empleadas, archivos de configuración o directivas de compilación no se apliquen de la misma manera, y sea necesario localizar la forma de trabajo equivalente para dicho sistema operativo.
 
 ## Ramas
 
