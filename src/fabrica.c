@@ -15,6 +15,7 @@ char fechaActual[15];
 int solicitarIdentificadorOperario();
 int eligeOpcionMenu();
 int generarLogDeHoy();
+void introducirError(int idOperario);
 
 int main(){
     
@@ -25,7 +26,7 @@ int main(){
     int opcionMenu = eligeOpcionMenu();
 
     switch(opcionMenu){
-        case 1: break;
+        case 1: introducirError(idOperario); break;
         case 2: break;
         case 3: break;
         case 4: break;
@@ -76,4 +77,17 @@ int generarLogDeHoy(){
     }
 
     return archivoGeneradoCorrectamente;
+}
+
+void introducirError(int idOperario){
+
+    char error[150];
+    puts("Introduce el mensaje de error: ");
+    getchar();
+    gets(error);
+
+    FILE *logDeHoy = fopen(fechaActual, "a");
+
+    fprintf(logDeHoy, "\n%d - %s\n", idOperario, error);
+    fclose(logDeHoy);
 }
