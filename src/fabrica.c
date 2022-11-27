@@ -13,6 +13,7 @@ char fechaActual[15];
 
 // prototipos de funciones
 int solicitarIdentificadorOperario();
+int eligeOpcionMenu();
 
 int main(){
     
@@ -23,6 +24,16 @@ int main(){
 
     if(strftime(fechaActual, sizeof(fechaActual), "%Y-%m-%d", &tiempoActualFraccionado)!=0){
         printf("\n* La fecha actual es: %s", fechaActual);
+    }
+
+    int opcionMenu = eligeOpcionMenu();
+
+    switch(opcionMenu){
+        case 1: break;
+        case 2: break;
+        case 3: break;
+        case 4: break;
+        default: break;
     }
 
     return 0;
@@ -38,4 +49,19 @@ int solicitarIdentificadorOperario(){
     scanf("%d", &identificador);
 
     return identificador;
+}
+
+int eligeOpcionMenu(){
+
+    puts("\n\nElige una opción:\n");
+    printf("1) Introducir error\n");
+    printf("2) Visualizar el historial de erorres de hoy\n");
+    printf("3) Vaciar historial de errores de hoy\n");
+    printf("4) Terminar jornada\n\n");
+
+    int eleccionUsuario;
+    printf("Acción: ");
+    scanf("%d", &eleccionUsuario);
+
+    return eleccionUsuario;
 }
