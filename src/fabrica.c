@@ -26,15 +26,19 @@ int main(){
     
     int logGenerado = generarLogDeHoy();
 
-    int opcionMenu = eligeOpcionMenu();
+    int opcionMenu;
 
-    switch(opcionMenu){
-        case 1: introducirError(idOperario); break;
-        case 2: visualizarLog(); break;
-        case 3: eliminarLogDeHoy(); break;
-        case 4: salida = 1; break;
-        default: break;
-    }
+    do{
+        opcionMenu = eligeOpcionMenu();
+
+        switch(opcionMenu){
+            case 1: introducirError(idOperario); break;
+            case 2: visualizarLog(); break;
+            case 3: eliminarLogDeHoy(); break;
+            case 4: salida = 1; break;
+            default: break;
+        }
+    } while((opcionMenu < 1) || (opcionMenu > 4));
 
     // ...
     
@@ -55,15 +59,18 @@ int solicitarIdentificadorOperario(){
 
 int eligeOpcionMenu(){
 
+    int eleccionUsuario;
+
     puts("\n\nElige una opción:\n");
     printf("1) Introducir error\n");
     printf("2) Visualizar el historial de erorres de hoy\n");
     printf("3) Vaciar historial de errores de hoy\n");
     printf("4) Terminar jornada\n\n");
 
-    int eleccionUsuario;
     printf("Acción: ");
     scanf("%d", &eleccionUsuario);
+
+    if(eleccionUsuario < 1 || eleccionUsuario > 4) puts("\nError. Introduce un valor correcto.");
 
     return eleccionUsuario;
 }
