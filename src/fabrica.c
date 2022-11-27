@@ -24,25 +24,25 @@ int main(){
     
     int salida = 0;
     int idOperario = solicitarIdentificadorOperario();
-    
-    int logGenerado = generarLogDeHoy();
 
     int opcionMenu;
 
-    do{
-        opcionMenu = eligeOpcionMenu();
+    if(generarLogDeHoy() == 1){
+        do{
+            opcionMenu = eligeOpcionMenu();
 
-        switch(opcionMenu){
-            case 1: introducirError(idOperario); break;
-            case 2: visualizarLog(); break;
-            case 3: eliminarLogDeHoy(); break;
-            case 4: salida = 1; break;
-            default: break;
-        }
-    } while(salida != 1);
+            switch(opcionMenu){
+                case 1: introducirError(idOperario); break;
+                case 2: visualizarLog(); break;
+                case 3: eliminarLogDeHoy(); break;
+                case 4: salida = 1; break;
+                default: break;
+            }
+        } while(salida != 1);
 
-    // ...
-    
+        // ...
+    }
+
     return 0;
 }
 
@@ -98,8 +98,12 @@ int generarLogDeHoy(){
 
     if(strftime(fechaActual, sizeof(fechaActual), "%Y-%m-%d", &tiempoActualFraccionado)!=0){
         logDeHoy = fopen(fechaActual, "a");
-        fclose(logDeHoy);
-        archivoGeneradoCorrectamente = 1;
+
+        if(logDeHoy != NULL){
+            fclose(logDeHoy);
+            archivoGeneradoCorrectamente = 1;
+        }
+        else puts("Error al abrir el archivo.");
     }
 
     return archivoGeneradoCorrectamente;
@@ -114,20 +118,27 @@ void introducirError(int idOperario){
 
     FILE *logDeHoy = fopen(fechaActual, "a");
 
-    fprintf(logDeHoy, "\n%d - %s\n", idOperario, error);
-    fclose(logDeHoy);
+    if(logDeHoy != NULL){
+        fprintf(logDeHoy, "\n%d - %s\n", idOperario, error);
+        fclose(logDeHoy);
+    }
+    else puts("Error al abrir el archivo.");
 }
 
 void visualizarLog(){
 
     FILE *logDeHoy = fopen(fechaActual,"r");
 
-    puts("\nEl historial de errores de hoy es: \n");
+    if(logDeHoy != NULL){
+        puts("\nEl historial de errores de hoy es: \n");
 
-    char caracter;
-    while((caracter = fgetc(logDeHoy)) != EOF) printf("%c",caracter);
-    printf("\n");
-    fclose(logDeHoy);
+        char caracter;
+        while((caracter = fgetc(logDeHoy)) != EOF) printf("%c",caracter);
+        printf("\n");
+        
+        fclose(logDeHoy);
+    }
+    else puts("Error al abrir el archivo.");
 }
 
 void eliminarLogDeHoy(){
