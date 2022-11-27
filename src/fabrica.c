@@ -38,7 +38,7 @@ int main(){
             case 4: salida = 1; break;
             default: break;
         }
-    } while((opcionMenu < 1) || (opcionMenu > 4));
+    } while(salida != 1);
 
     // ...
     
