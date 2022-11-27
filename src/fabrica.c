@@ -16,6 +16,7 @@ int solicitarIdentificadorOperario();
 int eligeOpcionMenu();
 int generarLogDeHoy();
 void introducirError(int idOperario);
+void visualizarLog();
 
 int main(){
     
@@ -27,7 +28,7 @@ int main(){
 
     switch(opcionMenu){
         case 1: introducirError(idOperario); break;
-        case 2: break;
+        case 2: visualizarLog(); break;
         case 3: break;
         case 4: break;
         default: break;
@@ -89,5 +90,17 @@ void introducirError(int idOperario){
     FILE *logDeHoy = fopen(fechaActual, "a");
 
     fprintf(logDeHoy, "\n%d - %s\n", idOperario, error);
+    fclose(logDeHoy);
+}
+
+void visualizarLog(){
+
+    FILE *logDeHoy = fopen(fechaActual,"r");
+
+    puts("\nEl historial de errores de hoy es: \n");
+
+    char caracter;
+    while((caracter = fgetc(logDeHoy)) != EOF) printf("%c",caracter);
+    printf("\n");
     fclose(logDeHoy);
 }
