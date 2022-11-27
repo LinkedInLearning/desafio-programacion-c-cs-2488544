@@ -21,6 +21,7 @@ void eliminarLogDeHoy();
 
 int main(){
     
+    int salida = 0;
     int idOperario = solicitarIdentificadorOperario();
     
     int logGenerado = generarLogDeHoy();
@@ -31,10 +32,12 @@ int main(){
         case 1: introducirError(idOperario); break;
         case 2: visualizarLog(); break;
         case 3: eliminarLogDeHoy(); break;
-        case 4: break;
+        case 4: salida = 1; break;
         default: break;
     }
 
+    // ...
+    
     return 0;
 }
 
