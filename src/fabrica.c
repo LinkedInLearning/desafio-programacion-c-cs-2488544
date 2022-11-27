@@ -14,17 +14,13 @@ char fechaActual[15];
 // prototipos de funciones
 int solicitarIdentificadorOperario();
 int eligeOpcionMenu();
+int generarLogDeHoy();
 
 int main(){
     
     int idOperario = solicitarIdentificadorOperario();
-    time_t tiempoActual = time(NULL);
-
-    struct tm tiempoActualFraccionado = *localtime(&tiempoActual);
-
-    if(strftime(fechaActual, sizeof(fechaActual), "%Y-%m-%d", &tiempoActualFraccionado)!=0){
-        printf("\n* La fecha actual es: %s", fechaActual);
-    }
+    
+    int logGenerado = generarLogDeHoy();
 
     int opcionMenu = eligeOpcionMenu();
 
@@ -64,4 +60,20 @@ int eligeOpcionMenu(){
     scanf("%d", &eleccionUsuario);
 
     return eleccionUsuario;
+}
+
+int generarLogDeHoy(){
+
+    FILE *logDeHoy;
+    int archivoGeneradoCorrectamente = 0;
+    time_t tiempoActual = time(NULL);
+    struct tm tiempoActualFraccionado = *localtime(&tiempoActual);
+
+    if(strftime(fechaActual, sizeof(fechaActual), "%Y-%m-%d", &tiempoActualFraccionado)!=0){
+        logDeHoy = fopen(fechaActual, "a");
+        fclose(logDeHoy);
+        archivoGeneradoCorrectamente = 1;
+    }
+
+    return archivoGeneradoCorrectamente;
 }
