@@ -18,6 +18,7 @@ int generarLogDeHoy();
 void introducirError(int idOperario);
 void visualizarLog();
 void eliminarLogDeHoy();
+int comprobarIdentificador(int identificador);
 
 int main(){
     
@@ -49,12 +50,25 @@ int main(){
 
 int solicitarIdentificadorOperario(){
     
-    int identificador;
-    
-    printf("\nIntroduce el identificador del operario: ");
-    scanf("%d", &identificador);
+    int identificador = 1;
+    int identificadorEsCorrecto = 0;
+
+    do{
+        printf("\nIntroduce el identificador del operario: ");
+        scanf("%d", &identificador);
+
+        identificadorEsCorrecto = comprobarIdentificador(identificador);
+
+        if(!identificadorEsCorrecto) {
+            puts("Error: introduce un identificador entre 1 y 9999");
+        }
+    } while(!identificadorEsCorrecto);
 
     return identificador;
+}
+
+int comprobarIdentificador(int identificador){
+    return ((identificador >= 1) && (identificador <= 9999));
 }
 
 int eligeOpcionMenu(){
