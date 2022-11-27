@@ -17,6 +17,7 @@ int eligeOpcionMenu();
 int generarLogDeHoy();
 void introducirError(int idOperario);
 void visualizarLog();
+void eliminarLogDeHoy();
 
 int main(){
     
@@ -29,7 +30,7 @@ int main(){
     switch(opcionMenu){
         case 1: introducirError(idOperario); break;
         case 2: visualizarLog(); break;
-        case 3: break;
+        case 3: eliminarLogDeHoy(); break;
         case 4: break;
         default: break;
     }
@@ -103,4 +104,14 @@ void visualizarLog(){
     while((caracter = fgetc(logDeHoy)) != EOF) printf("%c",caracter);
     printf("\n");
     fclose(logDeHoy);
+}
+
+void eliminarLogDeHoy(){
+    
+    char confirmacion = 'n';
+    puts("¿Estás seguro de vaciar el historial de hoy? (s/n)");
+    getchar();
+    scanf("%c", &confirmacion);
+
+    if(confirmacion == 's') remove(fechaActual);
 }
