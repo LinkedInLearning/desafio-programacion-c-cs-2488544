@@ -7,6 +7,7 @@
 // librerias
 #include <stdio.h>
 #include <time.h>
+#include <string.h>
 
 // variables globales
 char fechaActual[15]; 
@@ -148,5 +149,10 @@ void eliminarLogDeHoy(){
     getchar();
     scanf("%c", &confirmacion);
 
-    if(confirmacion == 's') remove(fechaActual);
+    if(confirmacion == 's') {
+        char copiaDeSeguridad[150];
+        strcpy(copiaDeSeguridad, "Copia de seguridad del día ");
+        strcat(copiaDeSeguridad, fechaActual);
+        rename(fechaActual, copiaDeSeguridad);
+    }
 }
