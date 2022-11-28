@@ -4,15 +4,12 @@
  * Instructor: @EliezerLopez
  * */
 
-// librerias
 #include <stdio.h>
 #include <time.h>
 #include <string.h>
 
-// variables globales
 char fechaActual[15]; 
 
-// prototipos de funciones
 int solicitarIdentificadorOperario();
 int eligeOpcionMenu();
 int generarLogDeHoy();
@@ -23,16 +20,11 @@ int comprobarIdentificador(int identificador);
 
 int main(){
     
-    int salida = 0;
-    int idOperario = solicitarIdentificadorOperario();
-
-    int opcionMenu;
+    int salida = 0, idOperario = solicitarIdentificadorOperario();
 
     if(generarLogDeHoy() == 1){
         do{
-            opcionMenu = eligeOpcionMenu();
-
-            switch(opcionMenu){
+            switch(eligeOpcionMenu()){
                 case 1: introducirError(idOperario); break;
                 case 2: visualizarLog(); break;
                 case 3: eliminarLogDeHoy(); break;
@@ -47,12 +39,9 @@ int main(){
     return 0;
 }
 
-// definición de funciones
-
 int solicitarIdentificadorOperario(){
     
-    int identificador = 1;
-    int identificadorEsCorrecto = 0;
+    int identificador = 1, identificadorEsCorrecto = 0;
 
     do{
         printf("\nIntroduce el identificador del operario: ");
@@ -112,12 +101,14 @@ int generarLogDeHoy(){
 
 void introducirError(int idOperario){
 
+    FILE *logDeHoy;
+
     char error[150];
     puts("Introduce el mensaje de error: ");
     getchar();
     gets(error);
 
-    FILE *logDeHoy = fopen(fechaActual, "a");
+    logDeHoy = fopen(fechaActual, "a");
 
     if(logDeHoy != NULL){
         fprintf(logDeHoy, "\n%d - %s\n", idOperario, error);
