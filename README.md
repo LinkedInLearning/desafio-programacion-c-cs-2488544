@@ -8,6 +8,8 @@ Consulta el archivo Readme en la rama main para obtener instrucciones e informac
 
 Este curso te presenta un reto para amplificar tus habilidades de programación en C. Como sabes, la práctica hace maestros, especialmente cuando se trata del desarrollo de aplicaciones. En este contenido práctico implementarás un sistema que permitirá al usuario o usuaria de nuestra aplicación notificar manualmente errores producidos durante su jornada de trabajo. Además, el histórico de errores se almacenará en logs diarios. Agarra tu teclado y prepárate. ¡Empezamos!
 
+Este curso está integrado con GitHub Codespaces, un entorno de desarrollo instantáneo alojado en la nube que ofrece toda la funcionalidad de tu IDE favorito sin tener que configurar una máquina local. Con Codespaces puedes practicar en cualquier lugar y desde cualquier dispositivo, de modo que no necesitas instalar ninguna otra herramienta. Aprende a dar los primeros pasos con el vídeo “Cómo usar GitHub Codespaces con este curso”.
+
 ## Instrucciones
 
 1. Para utilizar los archivos fuente, de cabecera o de configuración, necesitarás las siguientes herramientas:
