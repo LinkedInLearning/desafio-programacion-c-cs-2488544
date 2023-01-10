@@ -23,6 +23,8 @@ Este curso está integrado con GitHub Codespaces, un entorno de desarrollo insta
 
 Las ramas están estructuradas para corresponder a los vídeos del curso. Por ejemplo, la rama denominada `02` corresponde al segundo video. Algunas ramas tendrán un estado inicial y otro final. Están marcadas con las letras i («inicio») y f («fin»). La branch i tiene el mismo código que al principio del vídeo. La branch f tiene el mismo código que al final del vídeo. La rama master tiene el estado final del código que aparece en el curso.
 
+Este curso está integrado con GitHub Codespaces, un entorno de desarrollo instantáneo alojado en la nube que ofrece toda la funcionalidad de tu IDE favorito sin tener que configurar una máquina local. Con Codespaces puedes practicar en cualquier lugar y desde cualquier dispositivo, de modo que no necesitas instalar ninguna otra herramienta.
+
 ### Docente
 
 **Eliezer López**
