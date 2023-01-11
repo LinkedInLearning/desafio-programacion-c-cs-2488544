@@ -2,7 +2,7 @@
 
 Este es el repositorio del curso de LinkedIn Learning `[Desafío de programación: C]`. El curso completo está disponible en [LinkedIn Learning][lil-course-url].
 
-![Nombre completo del curso][lil-thumbnail-url]
+![image](https://user-images.githubusercontent.com/71371373/211757102-69abeb6a-e3af-4dcb-b953-54039078de35.png)
 
 Consulta el archivo Readme en la rama main para obtener instrucciones e información actualizadas.
 
@@ -32,7 +32,7 @@ Este curso está integrado con GitHub Codespaces, un entorno de desarrollo insta
 Echa un vistazo a mis otros cursos en [LinkedIn Learning](https://www.linkedin.com/learning/instructors/eliezer-lopez).
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
-[lil-course-url]: https://www.linkedin.com/learning/building-a-graphql-project-with-react-js
+[lil-course-url]: https://www.linkedin.com/learning/desafio-de-programacion-c/acepta-este-desafio-de-programacion-en-c
 [lil-thumbnail-url]: https://cdn.lynda.com/course/2875095/2875095-1615224395432-16x9.jpg
 
 [1]: # (End of ES-Instruction ###############################################################################################)
